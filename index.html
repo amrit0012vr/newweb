@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Activity Record - HEI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Centralised Student Activity Record</h1>
+    <p>For Higher Education Institutions</p>
+  </header>
+
+  <div class="container">
+    <h2>Add Student Activity</h2>
+    <form id="activityForm">
+      <input type="text" id="studentName" placeholder="Student Name" required>
+      <input type="text" id="studentID" placeholder="Student ID" required>
+      <select id="activityType" required>
+        <option value="">Select Activity Type</option>
+        <option value="Sports">Sports</option>
+        <option value="Cultural">Cultural</option>
+        <option value="Research">Research</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="date" id="activityDate" required>
+      <button type="submit">Add Activity</button>
+    </form>
+
+    <h2>Activity Records</h2>
+    <table id="recordsTable">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Student ID</th>
+          <th>Activity Type</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Records will appear here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
