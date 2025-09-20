@@ -3,48 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Activity Record - HEI</title>
+  <title>HEI Student Activity Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Centralised Student Activity Record</h1>
-    <p>For Higher Education Institutions</p>
-  </header>
+  <!-- Navigation Bar -->
+  <nav>
+    <h1>HEI Activity Portal</h1>
+  </nav>
 
   <div class="container">
-    <h2>Add Student Activity</h2>
-    <form id="activityForm">
-      <input type="text" id="studentName" placeholder="Student Name" required>
-      <input type="text" id="studentID" placeholder="Student ID" required>
-      <select id="activityType" required>
-        <option value="">Select Activity Type</option>
-        <option value="Sports">Sports</option>
-        <option value="Cultural">Cultural</option>
-        <option value="Research">Research</option>
-        <option value="Workshop">Workshop</option>
-        <option value="Other">Other</option>
-      </select>
-      <input type="date" id="activityDate" required>
-      <button type="submit">Add Activity</button>
-    </form>
+    <!-- Stats Cards -->
+    <div class="stats">
+      <div class="card" id="totalStudents">0<br><span>Students</span></div>
+      <div class="card" id="totalActivities">0<br><span>Activities</span></div>
+      <div class="card" id="sportsCount">0<br><span>Sports</span></div>
+      <div class="card" id="culturalCount">0<br><span>Cultural</span></div>
+    </div>
 
-    <h2>Activity Records</h2>
-    <table id="recordsTable">
-      <thead>
-        <tr>
-          <th>Student Name</th>
-          <th>Student ID</th>
-          <th>Activity Type</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Records will appear here -->
-      </tbody>
-    </table>
+    <!-- Add Form -->
+    <section>
+      <h2>Add Student Activity</h2>
+      <form id="activityForm">
+        <input type="text" id="studentName" placeholder="Student Name" required>
+        <input type="text" id="studentID" placeholder="Student ID" required>
+        <select id="activityType" required>
+          <option value="">Select Activity Type</option>
+          <option value="Sports">Sports</option>
+          <option value="Cultural">Cultural</option>
+          <option value="Research">Research</option>
+          <option value="Workshop">Workshop</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="date" id="activityDate" required>
+        <button type="submit">+ Add Activity</button>
+      </form>
+    </section>
+
+    <!-- Records Table -->
+    <section>
+      <h2>Activity Records</h2>
+      <table id="recordsTable">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Student ID</th>
+            <th>Activity Type</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Records will load here -->
+        </tbody>
+      </table>
+    </section>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
